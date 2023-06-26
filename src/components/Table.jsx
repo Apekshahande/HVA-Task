@@ -94,17 +94,19 @@ const Table = (props) =>{
             <table className="scroll-touch" >
                 <thead>
                 <tr >
-                    <th>
-                      <input
-                            type="checkbox"
-                            name="info"
-                            value="Heading section"
-                            onChange={handleChange}
-                      />
+                    <th> 
+                      <div>
+                        <input
+                              type="checkbox"
+                              name="info"
+                              value="Heading section"
+                              onChange={handleChange}
+                        />
+                      </div>
                     </th>
 
                     <th> 
-                        
+                        <div>
                        
                             File Name
                            
@@ -115,81 +117,95 @@ const Table = (props) =>{
                             >
                             <i  class="fa">&#xf0dc;</i>
                             </button>
-
+                        </div>
                         
                     </th>
                     
                     <th>
-                      Counterparty Name 
-                      <button
-                        type="button"
-                        onClick={() => requestSort('counterparty_name') }
-                        className={getClassNamesFor('counterparty_name')}
-                        >
-                        <i  class="fa">&#xf0dc;</i>
-                      </button>
+                      <div>
+                        Counterparty Name 
+                        <button
+                          type="button"
+                          onClick={() => requestSort('counterparty_name') }
+                          className={getClassNamesFor('counterparty_name')}
+                          >
+                          <i  class="fa">&#xf0dc;</i>
+                        </button>
+                      </div>
                     </th>
                     <th>
-                      Document Name 
-                      <button
-                        type="button"
-                        onClick={() => requestSort('document_name') }
-                        className={getClassNamesFor('counterparty_name')}
-                        >
-                        <i  class="fa">&#xf0dc;</i>
-                      </button>
+                      <div>
+                        Document Name 
+                        <button
+                          type="button"
+                          onClick={() => requestSort('document_name') }
+                          className={getClassNamesFor('counterparty_name')}
+                          >
+                          <i  class="fa">&#xf0dc;</i>
+                        </button>
+                      </div>
                     </th>
                     <th>
-                      Status 
-                      <button
-                        type="button"
-                        onClick={() => requestSort('status') }
-                        className={getClassNamesFor('counterparty_name')}
-                        >
-                        <i  class="fa">&#xf0dc;</i>
-                      </button>
+                      <div>
+                        Status 
+                        <button
+                          type="button"
+                          onClick={() => requestSort('status') }
+                          className={getClassNamesFor('counterparty_name')}
+                          >
+                          <i  class="fa">&#xf0dc;</i>
+                        </button>
+                      </div>
                       
                     </th>
                     <th>
-                      Effective Date
-                      <button
-                        type="button"
-                        onClick={() => requestSort('effective_date') }
-                        className={getClassNamesFor('counterparty_name')}
-                        >
-                        <i  class="fa">&#xf0dc;</i>
-                      </button>
+                      <div>
+                        Effective Date
+                        <button
+                          type="button"
+                          onClick={() => requestSort('effective_date') }
+                          className={getClassNamesFor('counterparty_name')}
+                          >
+                          <i  class="fa">&#xf0dc;</i>
+                        </button>
+                      </div>
 
                     </th>
                     <th>
-                      Agreement Date
-                      <button
-                        type="button"
-                        onClick={() => requestSort('agreement_date') }
-                        className={getClassNamesFor('counterparty_name')}
-                        >
-                        <i  class="fa">&#xf0dc;</i>
-                      </button>
+                      <div>
+                        Agreement Date
+                        <button
+                          type="button"
+                          onClick={() => requestSort('agreement_date') }
+                          className={getClassNamesFor('counterparty_name')}
+                          >
+                          <i  class="fa">&#xf0dc;</i>
+                        </button>
+                      </div>
                     </th>
                     <th>
-                      Expiration Date
-                      <button
-                        type="button"
-                        onClick={() => requestSort('expiration_date') }
-                        className={getClassNamesFor('counterparty_name')}
-                        >
-                        <i  class="fa">&#xf0dc;</i>
-                      </button>
+                      <div>
+                        Expiration Date
+                        <button
+                          type="button"
+                          onClick={() => requestSort('expiration_date') }
+                          className={getClassNamesFor('counterparty_name')}
+                          >
+                          <i  class="fa">&#xf0dc;</i>
+                        </button>
+                      </div>
                     </th>
                     <th>
-                      Termination
-                      <button
-                        type="button"
-                        onClick={() => requestSort('termination') }
-                        className={getClassNamesFor('counterparty_name')}
-                        >
-                        <i  class="fa">&#xf0dc;</i>
-                      </button>
+                      <div>
+                        Termination
+                        <button
+                          type="button"
+                          onClick={() => requestSort('termination') }
+                          className={getClassNamesFor('counterparty_name')}
+                          >
+                          <i  class="fa">&#xf0dc;</i>
+                        </button>
+                      </div>
                     </th>
                     
                 </tr>
@@ -202,22 +218,28 @@ const Table = (props) =>{
                         return(
                             <tr>
                                 <td> 
-                                  <input
-                                            
-                                      type="checkbox"
-                                      name="info"
-                                      value={[val.file_name , val.counterparty_name,val.document_name,val.status, val.effective_date, val.agreement_date,val.expiration_date, val.termination]}
-                                      onChange={handleChange}
-                                  />
+                                  <div>
+                                    <input
+                                              
+                                        type="checkbox"
+                                        name="info"
+                                        value={[val.file_name , val.counterparty_name,val.document_name,val.status, val.effective_date, val.agreement_date,val.expiration_date, val.termination]}
+                                        onChange={handleChange}
+                                    />
+                                  </div>
                                 </td>
-                                <td >{val.file_name}</td>
-                                <td>{val.counterparty_name}</td>
-                                <td>{val.document_name}</td>
-                                <td>{val.status}</td>
-                                <td>{val.effective_date}</td>
-                                <td>{val.agreement_date}</td>
-                                <td>{val.expiration_date}</td>
-                                <td>{val.termination}</td>
+                                <td >
+                                  <div>
+                                    {val.file_name}
+                                  </div>
+                                </td>
+                                <td><div>{val.counterparty_name}</div></td>
+                                <td><div>{val.document_name}</div></td>
+                                <td><div>{val.status}</div></td>
+                                <td><div>{val.effective_date}</div></td>
+                                <td><div>{val.agreement_date} </div></td>
+                                <td><div>{val.expiration_date}</div></td>
+                                <td><div>{val.termination}</div></td>
                             </tr>
                         )
                     })}    
